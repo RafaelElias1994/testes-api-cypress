@@ -42,4 +42,19 @@ describe('template spec', () => {
     cy.wait(2000);
     cy.get('input[placeholder="testeste"]').type('seu nome');
   });
+
+  it.only('Testes no site da atividade em grupo', function () {
+    cy.visit('/app/index.html');
+    cy.url().should('equal', 'http://localhost:59782/app/index.html');
+    cy.get("#name").click().type("Rafael Lima");
+    cy.get("#email").click().type("fds@gmail.com");
+    cy.get("body > div > form > button:nth-child(6)").click();
+    cy.contains('fds@gmail.com');
+  })
+
+
+
+
+
+
 });
