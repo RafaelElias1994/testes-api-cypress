@@ -30,7 +30,7 @@ describe('template spec', () => {
       });
       
 
-      cy.contains('Mia47@gmail.com').should('be.visible')
+      cy.contains('benjamin56@live.com').should('be.visible')
 
 
     });

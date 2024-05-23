@@ -1,5 +1,5 @@
 describe('template spec', () => {
-  it('Deve visitar o site institucional', () => {
+  it.only('Deve visitar o site institucional', () => {
     cy.visit('./app/index.html');
     cy.url().should('equal', 'https://rarolabs.com.br/');
   });
@@ -43,7 +43,7 @@ describe('template spec', () => {
     cy.get('input[placeholder="testeste"]').type('seu nome');
   });
 
-  it.only('Testes no site da atividade em grupo', function () {
+  it('Testes no site da atividade em grupo', function () {
     cy.visit('/app/index.html');
     cy.url().should('equal', 'http://localhost:59782/app/index.html');
     cy.get("#name").click().type("Rafael Lima");
